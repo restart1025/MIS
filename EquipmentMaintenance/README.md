@@ -19,4 +19,4 @@ FROM maintenance_record AS mr
 &emsp;LEFT JOIN consume_record AS cr ON mr.id = cr.record_id   
 &emsp;LEFT JOIN maintenance_consume AS mc ON cr.consume_id = mc.id   
 &emsp;LEFT JOIN equipment_type AS et ON eq.type = et.type_id   
-WHERE eq.`name`='比重计01';  
+WHERE eq.name='比重计01';  
