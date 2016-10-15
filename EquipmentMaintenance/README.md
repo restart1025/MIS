@@ -1,5 +1,5 @@
 ## 系统原型网址：
-http://4lmsy6.axshare.com
+http://phbmhb.axshare.com
 ##查询语句：
 ###根据设备名称查询保养记录：
 SELECT 	et.type_name AS '设备类型',   
