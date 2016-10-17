@@ -1,6 +1,7 @@
 ## 系统原型网址：
 http://phbmhb.axshare.com
-
+##ER图：
+![ER图](https://github.com/restart1025/MIS/blob/master/EquipmentMaintenance/ERPicture.jpg)
 ##查询语句：
 ###根据设备名称查询保养记录：
 SELECT 	et.type_name AS '设备类型',   
@@ -20,6 +21,8 @@ FROM maintenance_record AS mr
 &emsp;	LEFT JOIN maintenance_consume AS mc ON cr.consume_id = mc.id   
 &emsp;	LEFT JOIN equipment_type AS et ON eq.type = et.type_id   
 WHERE eq.name='比重计01';  
+###查询结果:  
+![](https://github.com/restart1025/MIS/blob/master/EquipmentMaintenance/%E6%A0%B9%E6%8D%AE%E8%AE%BE%E5%A4%87%E7%BC%96%E5%8F%B7%E6%9F%A5%E8%AF%A2%E4%BF%9D%E5%85%BB%E8%AE%B0%E5%BD%95.JPG)
 
 ###预警
 SELECT IF(  
@@ -38,6 +41,8 @@ SELECT IF(
 &emsp;&emsp;			LEFT JOIN equipment e ON e.id = mr.equipment_id   
 &emsp;	WHERE equipment_id = 1 ORDER BY mr.main_time DESC limit 1)  
 , 'true' ,'false') AS '是否需要预警';  
+###查询结果:
+![](https://github.com/restart1025/MIS/blob/master/EquipmentMaintenance/%E9%A2%84%E8%AD%A6.JPG)
 
 ###数据库
 SET FOREIGN_KEY_CHECKS=0;  
