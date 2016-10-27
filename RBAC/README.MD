@@ -22,3 +22,13 @@ SELECT 	cp.PrivilegeMaster AS '角色类型',
 
 ### 查询结果:
 ![](https://github.com/restart1025/MIS/blob/master/RBAC/RBAC.PNG)
+
+### 伪代码:
+1、根据名称查找人员编号UserID  
+2、根据人员编号UserID查找改人员所对应的角色集合RoleIDs  
+3、在权限表中查找  
+&emsp;&emsp;&emsp;角色类型为CF_Role &emsp; AND &emsp; 角色编号在角色集合RoleIDs中  
+&emsp;&emsp;OR  
+&emsp;&emsp;&emsp;角色类型为CF_User &emsp; AND &emsp; 人员编号为UserID  
+&emsp;&emsp;AND 权限属性为Permit  
+&emsp;&emsp;并按角色类型排序  
