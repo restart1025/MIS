@@ -19,3 +19,6 @@ SELECT 	cp.PrivilegeMaster AS '角色类型',
 &emsp;&emsp;&emsp;&emsp;AND  
 &emsp;&emsp;&emsp;&emsp;&emsp;cp.PrivilegeOperation = 'Permit'   
 &emsp;&emsp;&emsp;&emsp;ORDER BY cp.PrivilegeAccess DESC;  
+
+### 查询结果:
+![](https://github.com/restart1025/MIS/blob/master/RBAC/RBAC.PNG)
