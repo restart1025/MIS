@@ -11,7 +11,8 @@ SELECT 	cp.PrivilegeMaster AS '角色类型',
 &emsp;&emsp;LEFT JOIN sys_button AS sb ON cp.PrivilegeAccessKey = sb.BtnID AND cp.PrivilegeAccess = 'Sys_Button'  
 &emsp;WHERE ((cp.PrivilegeMaster = 'CF_Role'   
 &emsp;&emsp;&emsp;&emsp;&emsp;AND cp.PrivilegeMasterKey   
-&emsp;&emsp;&emsp;&emsp;&emsp;IN (SELECT RoleID FROM cf_userrole AS cur LEFT JOIN cf_user AS cu ON cur.UserID = cu.UserID  WHERE cu.LoginName='test1' ))   
+&emsp;&emsp;&emsp;&emsp;&emsp;IN (SELECT RoleID FROM cf_userrole AS cur   
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;LEFT JOIN cf_user AS cu ON cur.UserID = cu.UserID  WHERE cu.LoginName='test1' ))   
 &emsp;&emsp;&emsp;&emsp;OR   
 &emsp;&emsp;&emsp;&emsp;&emsp;(cp.PrivilegeMaster = 'CF_User'   
 &emsp;&emsp;&emsp;&emsp;&emsp;AND cp.PrivilegeMasterKey = (SELECT UserID FROM cf_user WHERE LoginName = 'test1')))  
