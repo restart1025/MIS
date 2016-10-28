@@ -29,4 +29,4 @@ SELECT 	cp.PrivilegeMaster AS '角色类型',
 &emsp;&emsp;&emsp;角色类型为CF_Role &emsp; AND &emsp; 角色编号在角色集合RoleIDs中  
 &emsp;&emsp;OR  
 &emsp;&emsp;&emsp;角色类型为CF_User &emsp; AND &emsp; 人员编号为UserID  
-&emsp;&emsp;AND 权限属性为Permit AND 权限为Sys_Menu的数据
+&emsp;&emsp;AND 权限属性为Permit &emsp; AND &emsp; 权限为Sys_Menu的数据
