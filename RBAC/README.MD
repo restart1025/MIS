@@ -17,8 +17,7 @@ SELECT 	cp.PrivilegeMaster AS '角色类型',
 &emsp;&emsp;&emsp;&emsp;&emsp;(cp.PrivilegeMaster = 'CF_User'   
 &emsp;&emsp;&emsp;&emsp;&emsp;AND cp.PrivilegeMasterKey = (SELECT UserID FROM cf_user WHERE LoginName = 'test1')))  
 &emsp;&emsp;&emsp;&emsp;AND  
-&emsp;&emsp;&emsp;&emsp;&emsp;cp.PrivilegeOperation = 'Permit'   
-&emsp;&emsp;&emsp;&emsp;&emsp;AND cp.PrivilegeAccess = 'Sys_Menu';
+&emsp;&emsp;&emsp;&emsp;&emsp;cp.PrivilegeOperation = 'Permit' AND cp.PrivilegeAccess = 'Sys_Menu';
 
 ### 查询结果:
 ![](https://github.com/restart1025/MIS/blob/master/RBAC/Menu.PNG)
