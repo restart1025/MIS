@@ -21,7 +21,7 @@ SELECT 	cp.PrivilegeMaster AS '角色类型',
 &emsp;&emsp;&emsp;&emsp;&emsp;AND cp.PrivilegeAccess = 'Sys_Menu';
 
 ### 查询结果:
-![](https://github.com/restart1025/MIS/blob/master/RBAC/RBAC.PNG)
+![](https://github.com/restart1025/MIS/blob/master/RBAC/Menu.PNG)
 
 ### 伪代码:
 1、根据名称查找人员编号UserID  
