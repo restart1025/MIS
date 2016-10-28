@@ -48,6 +48,9 @@ SELECT 	cp.PrivilegeMaster AS '角色类型',
 &emsp;&emsp;&emsp;&emsp;AND  
 &emsp;&emsp;&emsp;&emsp;&emsp;cp.PrivilegeOperation = 'Permit' AND cp.PrivilegeAccess = 'Sys_Button' AND sm.MenuName = '订单';  
 
+### 查询结果
+![](https://github.com/restart1025/MIS/blob/master/RBAC/Button.PNG)
+
 ### 伪代码
 1、根据名称查找人员编号UserID  
 2、根据人员编号UserID查找改人员所对应的角色集合RoleIDs  
